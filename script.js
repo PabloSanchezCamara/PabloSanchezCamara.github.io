@@ -22,8 +22,8 @@ const projects = [
     div.innerHTML = `
       <h3>${project.title}</h3>
       <p>${project.description}</p>
-      <a href="${project.link}" target="_blank">Presentación de proyecto</a>
-      <a href="${project.github}" target="_blank">Github</a>
+      <a href="${project.link}" target="_blank" rel="noopener noreferrer">Presentación de proyecto</a>
+      <a href="${project.github}" target="_blank" rel="noopener noreferrer">Github</a>
     `;
     container.appendChild(div);
   });
