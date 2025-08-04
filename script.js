@@ -10,6 +10,12 @@ const projects = [
       description: "Ciclocero es una plataforma creada para entusiastas del ciclismo que buscan explorar nuevas rutas y compartir experiencias con otros usuarios de la comunidad ciclista. Con Ciclocero, los usuarios pueden crear, descubrir y compartir sus rutas favoritas para bicicleta, junto con descripciones detalladas, información sobre modalidad, distancias, reseñas, fotos y puntos de interés en el camino.",
       link: "https://ciclocero.netlify.app/",
       github: "https://github.com/fraestgue/ciclocero-project3#"
+    },
+    {
+      title: "Tanks Battle",
+      description: "Tank Battle es un juego en el que el jugador tiene que destruir tanques enemigos mientras intenta esquivarlos para no perder su vida.",
+      link: "https://pablosanchezcamara.github.io/tanks-battle/",
+      github: "https://github.com/PabloSanchezCamara/tanks-battle"
     }
   ];
   
