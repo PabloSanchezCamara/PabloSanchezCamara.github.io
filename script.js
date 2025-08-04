@@ -3,7 +3,7 @@ const projects = [
       title: "Niko Niko",
       description: "Es una aplicación diseñada para medir el estado de ánimo de las personas al finalizar su jornada laboral. Su objetivo es fomentar el bienestar emocional en equipos de trabajo y medir su grado de satisfacción.",
       link: "https://honored-clave-790.notion.site/Proyecto-niko-niko-240d582b0cb5802e9413d4bf018b5353",
-      github: "XXX"
+      github: "https://github.com/PabloSanchezCamara/niko-niko"
     },
     {
       title: "Ciclocero",
