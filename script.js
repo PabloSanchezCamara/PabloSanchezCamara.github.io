@@ -13,7 +13,7 @@ const projects = [
     },
     {
       title: "Tanks Battle",
-      description: "Tanks Battle es un juego en el que el jugador tiene que destruir tanques enemigos mientras intenta esquivarlos para no perder su vida.",
+      description: "Tanks Battle es un juego en el que el jugador tiene que destruir tanques enemigos mientras intenta esquivarlos para no perder su vida. Estos enemigos salen de manera aleatoria por cualquier lado de la pantalla e irán aumentando su velocidad de movimiento según pasa el tiempo. El jugador también tendrá un bonus con el que podrá ir aumentando su velocidad.",
       link: "https://pablosanchezcamara.github.io/tanks-battle/",
       github: "https://github.com/PabloSanchezCamara/tanks-battle"
     }

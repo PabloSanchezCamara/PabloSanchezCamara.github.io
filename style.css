@@ -6,23 +6,26 @@
   }
   
   body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
-    background-color: #fdfdfd;
+    background-color: #fef6f0;
     color: #222;
     padding-bottom: 4rem;
+    transition: background 0.3s ease, color 0.3s ease;
   }
   
   /* Header */
   header {
-    background: #1e1e1e;
+    background: #7e9cd8;
     color: white;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
   }
   
   header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
   
@@ -30,18 +33,31 @@
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    margin-top: 1rem;
   }
   
   nav a {
-    color: #ddd;
+    color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1rem;
+    position: relative;
   }
   
-  nav a:hover {
-    color: #fff;
-    border-bottom: 2px solid #fff;
+  nav a::after {
+    content: '';
+    height: 2px;
+    background: white;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
   }
   
   /* Secciones */
@@ -52,33 +68,42 @@
   }
   
   section h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    border-left: 4px solid #1e1e1e;
-    padding-left: 0.5rem;
-    color: #111;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #f7b2b7;
+    padding-left: 0.75rem;
+    color: #444;
   }
   
   /* Proyectos */
   .project {
-    border: 1px solid #e0e0e0;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     background: white;
+    border: 1px solid #e7e7e7;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   }
   
   .project h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    color: #333;
   }
   
   .project a {
     display: inline-block;
     margin-right: 1rem;
-    color: #0077cc;
+    color: #88c9bf;
     text-decoration: none;
+    font-weight: 500;
+    margin-top: 0.5rem;
   }
   
   .project a:hover {
@@ -93,7 +118,7 @@
   }
   
   #contact a {
-    color: #0077cc;
+    color: #7e9cd8;
     text-decoration: none;
   }
   
@@ -103,14 +128,14 @@
   
   /* Footer */
   footer {
-    background: #f9f9f9;
+    background: #f2f2f2;
     text-align: center;
     padding: 2rem 1rem;
     font-size: 0.9rem;
     color: #555;
     border-top: 1px solid #e0e0e0;
   }
-
+  
   /* Dark Mode */
   body.dark {
     background-color: #1e1e1e;
@@ -118,17 +143,20 @@
   }
   
   body.dark header {
-    background: #111;
-    color: white;
+    background: #333;
   }
   
   body.dark section h2 {
-    color: #f1f1f1;
-    border-left-color: #fff;
+    color: #eee;
+    border-left-color: #88c9bf;
+  }
+
+  body.dark section h3 {
+    color: #eee;
   }
   
   body.dark .project {
-    background: #2a2a2a;
+    background: #2c2c2c;
     border-color: #444;
   }
   
@@ -136,12 +164,12 @@
     color: #ccc;
   }
   
-  body.dark nav a:hover {
-    color: white;
+  body.dark nav a::after {
+    background: #ccc;
   }
   
   body.dark #contact a {
-    color: #8ab4f8;
+    color: #88c9bf;
   }
   
   body.dark footer {
@@ -150,11 +178,19 @@
     border-top-color: #333;
   }
   
+  /* Botón modo oscuro */
   #toggle-theme {
     background: none;
-    border: none;
+    border: 2px solid white;
     font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
     cursor: pointer;
     color: white;
     margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  #toggle-theme:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
