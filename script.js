@@ -1,14 +1,16 @@
 const projects = [
     {
       title: "Niko Niko",
-      description: "Aplicación de seguimiento emocional basada en la metodología ágil.",
-      link: "XXX"//"https://github.com/tuusuario/niko-niko"
+      description: "Es una aplicación diseñada para medir el estado de ánimo de las personas al finalizar su jornada laboral. Su objetivo es fomentar el bienestar emocional en equipos de trabajo y medir su grado de satisfacción.",
+      link: "https://honored-clave-790.notion.site/Proyecto-niko-niko-240d582b0cb5802e9413d4bf018b5353",
+      github: "XXX"
     },
-    // {
-    //   title: "Blog Ciclismo",
-    //   description: "Revista digital sobre ciclismo con artículos y reportajes.",
-    //   link: "https://elfarillorojo.com"
-    // }
+    {
+      title: "Ciclocero",
+      description: "Ciclocero es una plataforma creada para entusiastas del ciclismo que buscan explorar nuevas rutas y compartir experiencias con otros usuarios de la comunidad ciclista. Con Ciclocero, los usuarios pueden crear, descubrir y compartir sus rutas favoritas para bicicleta, junto con descripciones detalladas, información sobre modalidad, distancias, reseñas, fotos y puntos de interés en el camino.",
+      link: "https://ciclocero.netlify.app/",
+      github: "https://github.com/fraestgue/ciclocero-project3#"
+    }
   ];
   
   // Mostrar proyectos en el DOM
@@ -20,7 +22,8 @@ const projects = [
     div.innerHTML = `
       <h3>${project.title}</h3>
       <p>${project.description}</p>
-      <a href="${project.link}" target="_blank">Ver proyecto</a>
+      <a href="${project.link}" target="_blank">Presentación de proyecto</a>
+      <a href="${project.github}" target="_blank">Github</a>
     `;
     container.appendChild(div);
   });
