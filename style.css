@@ -1,44 +1,112 @@
-body {
-    font-family: Arial, sans-serif;
+/* Base Reset y estilos generales */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #222;
+    padding-bottom: 4rem;
+  }
+  
+  /* Header */
   header {
-    background: #222;
+    background: #1e1e1e;
     color: white;
-    padding: 1rem;
+    padding: 2rem 1rem;
     text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
   
   nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   nav a {
-    color: white;
+    color: #ddd;
     text-decoration: none;
+    font-weight: 500;
   }
   
+  nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Secciones */
   section {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
     max-width: 800px;
     margin: auto;
   }
   
-  .project {
-    border: 1px solid #ccc;
-    padding: 1rem;
+  section h2 {
+    font-size: 1.75rem;
     margin-bottom: 1rem;
-    border-radius: 6px;
+    border-left: 4px solid #1e1e1e;
+    padding-left: 0.5rem;
+    color: #111;
   }
   
+  /* Proyectos */
+  .project {
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    background: white;
+  }
+  
+  .project h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project a {
+    display: inline-block;
+    margin-right: 1rem;
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .project a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contacto */
+  #contact p,
+  #contact a {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #contact a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
   footer {
-    background: #f1f1f1;
+    background: #f9f9f9;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #e0e0e0;
   }
