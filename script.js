@@ -20,33 +20,34 @@ const projects = [
   ];
   
   // Mostrar proyectos en el DOM
-  const container = document.getElementById("project-list");
+  document.addEventListener("DOMContentLoaded", () => {
+    // Cargar proyectos
+    const container = document.getElementById("project-list");
+    projects.forEach((project) => {
+      const div = document.createElement("div");
+      div.className = "project";
+      div.innerHTML = `
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <a href="${project.link}" target="_blank" rel="noopener noreferrer">Presentación de proyecto</a>
+        <a href="${project.github}" target="_blank" rel="noopener noreferrer">Github</a>
+      `;
+      container.appendChild(div);
+    });
   
-  projects.forEach((project) => {
-    const div = document.createElement("div");
-    div.className = "project";
-    div.innerHTML = `
-      <h3>${project.title}</h3>
-      <p>${project.description}</p>
-      <a href="${project.link}" target="_blank" rel="noopener noreferrer">Presentación de proyecto</a>
-      <a href="${project.github}" target="_blank" rel="noopener noreferrer">Github</a>
-    `;
-    container.appendChild(div);
+    // Activar modo oscuro si estaba guardado
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark');
+    }
+  
+    // Configurar botón
+    const toggleThemeBtn = document.getElementById('toggle-theme');
+    if (toggleThemeBtn) {
+      toggleThemeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+      });
+    }
   });
-  
-  const toggleThemeBtn = document.getElementById('toggle-theme');
-
-toggleThemeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  // Guarda preferencia en localStorage
-  const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
-  localStorage.setItem('theme', theme);
-});
-
-// Mantener tema al recargar
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark');
-  }
-});
