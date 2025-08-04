@@ -110,3 +110,51 @@
     color: #555;
     border-top: 1px solid #e0e0e0;
   }
+
+  /* Dark Mode */
+  body.dark {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+  
+  body.dark header {
+    background: #111;
+    color: white;
+  }
+  
+  body.dark section h2 {
+    color: #f1f1f1;
+    border-left-color: #fff;
+  }
+  
+  body.dark .project {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+  
+  body.dark nav a {
+    color: #ccc;
+  }
+  
+  body.dark nav a:hover {
+    color: white;
+  }
+  
+  body.dark #contact a {
+    color: #8ab4f8;
+  }
+  
+  body.dark footer {
+    background: #111;
+    color: #aaa;
+    border-top-color: #333;
+  }
+  
+  #toggle-theme {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+    margin-top: 1rem;
+  }

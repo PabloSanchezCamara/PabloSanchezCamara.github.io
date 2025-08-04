@@ -34,3 +34,19 @@ const projects = [
     container.appendChild(div);
   });
   
+  const toggleThemeBtn = document.getElementById('toggle-theme');
+
+toggleThemeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  // Guarda preferencia en localStorage
+  const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+  localStorage.setItem('theme', theme);
+});
+
+// Mantener tema al recargar
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+  }
+});
