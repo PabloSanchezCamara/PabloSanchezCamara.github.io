@@ -47,3 +47,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+const experience = [
+  {
+    title: "zityhub",
+    from: "Desde Abril 2024",
+    to: "",
+    progress: `
+    <p>Durante mi etapa en <strong>Zityhub</strong> he adquirido una experiencia valiosa trabajando en un entorno profesional de desarrollo web, participando tanto en proyectos individuales como colaborativos dentro de un equipo multidisciplinar.</p>
+    <p>Me he familiarizado con el flujo de trabajo de una empresa tecnológica real, desde metodologías ágiles hasta la entrega continua de producto.</p>
+    <p>En el área de <strong>frontend</strong>, he trabajado principalmente con <strong>JavaScript</strong>, desarrollando interfaces modernas mediante el uso de <strong>React</strong>, junto a tecnologías como <strong>Styled Components</strong>, <strong>Redux</strong> para la gestión de estado y herramientas de testing como <strong>React Testing Library</strong> para asegurar la calidad del código.</p>
+    <p>También he colaborado estrechamente con los equipos de <strong>backend</strong> y <strong>diseño</strong>, ampliando así mi visión del desarrollo full stack. En este contexto, he utilizado herramientas como <strong>MongoDB</strong>, <strong>Sequel Pro</strong> y <strong>Figma</strong>.</p>
+    <p>Además de mejorar mis habilidades técnicas, esta experiencia me ha permitido desarrollar competencias clave como el trabajo en remoto, la comunicación entre equipos, la gestión del tiempo y la capacidad de adaptación a nuevos retos y tecnologías.</p>
+  `
+    
+  }
+]
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("experience-list");
+    experience.forEach((experience) => {
+      const div = document.createElement("div");
+      div.className = "experience";
+      div.innerHTML = `
+        <h3>${experience.title}</h3>
+        <p>${experience.from}</p>
+        <p>${experience.progress}</p>
+      `;
+      container.appendChild(div);
+    });
+})
