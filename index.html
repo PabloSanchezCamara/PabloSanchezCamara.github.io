@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Pablo Sánchez</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#experiences">Experiencia</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-    <button id="toggle-theme" aria-label="Cambiar modo de tema">🌓</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pablo Sánchez · Frontend Developer</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>Soy desarrollador Frontend desde hace unos años con conocimientos en JS, ReactJS, Styled-Components, Redux …  y experiencia en entornos utilizando el stack MERN (también he hecho algunos proyectos con Prestashop). Me caracterizo por una gran motivación por el aprendizaje continuo, una actitud positiva y una sólida predisposición para el trabajo en equipo. Estoy preparado para aplicar mis habilidades técnicas, mi creatividad y mi pasión por el desarrollo de interfaces atractivas y funcionales, con el objetivo de contribuir al crecimiento y la visión de una empresa comprometida con la innovación y la experiencia del usuario.</p>
-  </section>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <section id="projects">
-    <h2>Proyectos</h2>
-    <div class="project-list" id="project-list"></div>
-  </section>
+    <meta name="description" content="Portfolio de Pablo Sánchez, desarrollador Frontend con experiencia en React, JS y el stack MERN. Proyectos, experiencia y contacto." />
+  </head>
+  <body>
+    <header>
+      <h1>Pablo Sánchez</h1>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#experiences">Experiencia</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <button id="toggle-theme" aria-label="Cambiar modo de tema">🌓</button>
+    </header>
 
-  <section id="experiences">
-    <h2>Experiencia</h2>
-    <div class="experience-list" id="experience-list"></div>
-  </section>
+    <main>
+      <section id="about">
+        <h2>Sobre mí</h2>
+        <p>
+            Soy desarrollador Frontend desde hace unos años con conocimientos en JS, ReactJS, Styled-Components, Redux … y experiencia en entornos utilizando el stack MERN (también he hecho algunos proyectos con Prestashop). Me caracterizo por una gran motivación por el aprendizaje continuo, una actitud positiva y una sólida predisposición para el trabajo en equipo. Estoy preparado para aplicar mis habilidades técnicas, mi creatividad y mi pasión por el desarrollo de interfaces atractivas y funcionales, con el objetivo de contribuir al crecimiento y la visión de una empresa comprometida con la innovación y la experiencia del usuario.
+        </p>
+      </section>
 
-  <section id="contact">
-    <h2>Contacto</h2>
-    <p>Email: pablosanchezcamara89@gmail.com</p>
-    <a href="https://www.linkedin.com/in/pablo-sanchez-web-dev/" target="_blank" rel="noopener noreferrer">Linkedin</a>
-    <a href="https://github.com/PabloSanchezCamara" target="_blank" rel="noopener noreferrer">Github</a>
-  </section>
+      <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="project-list" id="project-list">
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2025 Pablo Sánchez</p>
-  </footer>
+      <section id="experiences">
+        <h2>Experiencia</h2>
+        <div class="experience-list" id="experience-list">
+        </div>
+      </section>
 
-  <script src="script.js"></script>
-</body>
+      <section id="contact">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:pablosanchezcamara89@gmail.com">pablosanchezcamara89@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/pablo-sanchez-web-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <p><a href="https://github.com/PabloSanchezCamara" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Pablo Sánchez</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
